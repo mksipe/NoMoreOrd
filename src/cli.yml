@@ -1,0 +1,11 @@
+name: "NoMoreOrd"
+version: "1.0"
+author: Mason Sipe
+about: Converts unicode back to plain ASCII text.
+args:
+    - ciphertext:
+        short: c
+        long: ciphertext
+        value_name: STDIN
+        help: Translates one single value.
+        takes_value: true
