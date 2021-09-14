@@ -72,7 +72,10 @@ line 11 -> (    'm'     )
 line 12 -> (    'p'     )
 ```
 
+> The -f flag tests all the values separated by a newline in a specificd file.
+
 ---
+
 
 # Help Page 
 
