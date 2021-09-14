@@ -9,3 +9,9 @@ args:
         value_name: STDIN
         help: Translates one single value.
         takes_value: true
+    - inputfile:
+        short: f
+        long: input
+        value_name: FILEIN
+        help: Translates a file from its newline input.
+        takes_value: true
