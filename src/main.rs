@@ -5,10 +5,12 @@ use clap::App;
 fn main() {
     let yaml = load_yaml!("cli.yml");
     let matches = App::from_yaml(yaml).get_matches();
-    let anothermatch = App::from_yaml(yaml).get_matches();
-    match matches {
-        inputfile   => file_to_ascii(anothermatch.value_of("inputfile").unwrap()),
-        ciphertext  => to_ascii(anothermatch.value_of("ciphertext").unwrap()),
+    if matches.is_present("ciphertext"){
+        to_ascii(matches.value_of("ciphertext").unwrap());
+    } else if matches.is_present("inputfile") {
+        file_to_ascii(matches.value_of("inputfile").unwrap());
+    } else {
+        println!("{}", "Please input a valid argument.");
     }
 }
 fn to_ascii(input:&str<>) {
