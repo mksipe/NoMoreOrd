@@ -13,7 +13,7 @@ fn main() {
         println!("{}", "Please input a valid argument.");
     }
 }
-fn to_ascii(input:&str<>) {
+pub fn to_ascii(input:&str<>) {
     use std::char;
     let input: u32 = input.parse::<u32>().unwrap();
     let out: Option<char> = char::from_u32(input);
@@ -21,14 +21,14 @@ fn to_ascii(input:&str<>) {
 }
 
 
-fn f_to_ascii(input:&str<>) -> Option<char> {
+pub fn f_to_ascii(input:&str<>) -> Option<char> {
     use std::char;
     let input: u32 = input.parse::<u32>().unwrap();
     let out: Option<char> = char::from_u32(input);
     return out;
 }
 
-fn file_to_ascii(file_name:&str){
+pub fn file_to_ascii(file_name:&str){
     use std::fs::File;
     use std::io::{BufRead, BufReader};
     let file = File::open(file_name).unwrap();
