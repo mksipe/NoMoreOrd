@@ -1,5 +1,5 @@
 [package]
-name = "ord"
+name = "nomoreord"
 version = "0.1.0"
 authors = ["mason"]
 edition = "2018"
